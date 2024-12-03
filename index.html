@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四方连续图制作工具</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>四方连续图制作工具</h1>
+            <p class="subtitle">上传图片，一键生成精美的四方连续图案</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <label for="imageInput" class="upload-button">
+                    选择图片
+                    <input type="file" id="imageInput" accept="image/*" hidden>
+                </label>
+            </div>
+
+            <div class="preview-section">
+                <div class="preview-container">
+                    <h2>原始图片</h2>
+                    <div class="image-container">
+                        <img id="originalImage" src="" alt="原始图片" class="preview-image">
+                    </div>
+                </div>
+                
+                <div class="preview-container">
+                    <h2>生成效果</h2>
+                    <div class="image-container">
+                        <canvas id="resultCanvas" class="preview-image"></canvas>
+                    </div>
+                    <button id="downloadButton" class="download-button" disabled>下载图片</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- 图片预览模态框 -->
+        <div id="imageModal" class="modal">
+            <span class="close-button">&times;</span>
+            <img id="modalImage" class="modal-content">
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html> 
